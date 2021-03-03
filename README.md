@@ -1,10 +1,10 @@
-<p align="center">
-  <img width="460" height="300" src="(https://lh3.googleusercontent.com/YkyoTs06gb0NSw6dUFrJROCAwY0rnqrERwqFLzcIdLl7SzZU4Wllr1pIXNDhGlNPZS7rWkp3lmy9o5mIkmbllI3r=w640-h400-e365-rj-sc0x00ffffff">
-</p>
-
-Imasse - Search the web, educate the world
+<h1>Imasse - Search the web, educate the world</h1>
 
 This extension will change your default search engine and new tab to Imasse, where every search you do helps to provide someone with access to an education. 
+
+<p align="center">
+  <img width="460" height="300" src="https://lh3.googleusercontent.com/YkyoTs06gb0NSw6dUFrJROCAwY0rnqrERwqFLzcIdLl7SzZU4Wllr1pIXNDhGlNPZS7rWkp3lmy9o5mIkmbllI3r=w640-h400-e365-rj-sc0x00ffffff">
+</p>
 
 ⇨ How It Works
 
