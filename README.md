@@ -1,5 +1,6 @@
-
-![Imasse Search Extension In Action](https://lh3.googleusercontent.com/YkyoTs06gb0NSw6dUFrJROCAwY0rnqrERwqFLzcIdLl7SzZU4Wllr1pIXNDhGlNPZS7rWkp3lmy9o5mIkmbllI3r=w640-h400-e365-rj-sc0x00ffffff)
+<p align="center">
+  <img width="460" height="300" src="(https://lh3.googleusercontent.com/YkyoTs06gb0NSw6dUFrJROCAwY0rnqrERwqFLzcIdLl7SzZU4Wllr1pIXNDhGlNPZS7rWkp3lmy9o5mIkmbllI3r=w640-h400-e365-rj-sc0x00ffffff">
+</p>
 
 Imasse - Search the web, educate the world
 
