@@ -40,4 +40,5 @@ https://imasse.com/terms
 
 Happy searching :)
 
-© IMASSE, LLC
+IMASSE, LLC ™
+
