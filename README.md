@@ -1,4 +1,4 @@
-![Imasse](https://imasse.com/files/img/hotlink-ok/logo.png)
+![Imasse](https://camo.githubusercontent.com/b3fb794907abbf03b6fff6dcf918e5251a4a215a08d9b93ff78f9b73ec0cf232/68747470733a2f2f63646e2e696d617373652e636f6d2f696d672f6c6f676f2e706e67)
 ---
 
 This extension will change your default search engine and new tab to Imasse, where every search you do helps to provide someone with access to an education. 
