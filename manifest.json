@@ -1,4 +1,3 @@
-<<<<<<< main
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
@@ -47,6 +46,3 @@
     }
   ]
 }
-=======
-{"update_url":"https://clients2.google.com/service/update2/crx","manifest_version":2,"name":"Imasse - Search the web, educate the world","version":"1.25","author":"Imasse.com","default_locale":"en","icons":{"16":"files/img/favicon-16x16.png","32":"files/img/favicon-32x32.png","128":"files/img/favicon-128x128.png"},"browser_action":{"default_title":"Imasse - Search the web, educate the world","default_icon":"files/img/favicon-32x32.png","browser_style":false},"chrome_settings_overrides":{"search_provider":{"encoding":"UTF-8","is_default":true,"keyword":"Imasse","name":"Imasse","search_url":"https://www.imasse.com/search?q={searchTerms}","suggest_url":"https://api.imasse.com/autosuggest?q={searchTerms}&type=list"}},"chrome_url_overrides":{"newtab":"files/tab.html"},"background":{"scripts":["files/background.js"],"persistent":false},"content_scripts":[{"matches":["https://*.imasse.com/*"],"css":["files/content.css"],"run_at":"document_end"}]}
->>>>>>> main-dev
