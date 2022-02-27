@@ -22,7 +22,8 @@
       "keyword": "Imasse",
       "name": "Imasse",
       "search_url": "https://www.imasse.com/search?q={searchTerms}",
-      "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list"
+      "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list",
+      "favicon_url": "https://cdn.imasse.com/img/favicon-32x32.png"
     }
   },
   "chrome_url_overrides": {
