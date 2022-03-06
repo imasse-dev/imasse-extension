@@ -1,5 +1,5 @@
 .home-background {
-    height: 100vh;
+    height: calc(100vh - 75.63px);
     background-color: #fafafa;
     position: sticky;
     width: 100%
