@@ -2,7 +2,7 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
   "name": "Imasse - Search the web, educate the world",
-  "version": "1.25",
+  "version": "1.26",
   "author": "Imasse.com",
   "default_locale": "en",
   "icons": {
