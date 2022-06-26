@@ -9,9 +9,16 @@ Imasse's Browser Extension is distributed under the Mozilla Public License 2.0 [
 This extension gives users quick and easy access to the Imasse search engine found at www.imasse.com
 
 - Launches Imasse on new tab load
+  - Top Sites
+  - Apps Menu
+  - Custom Background
+  - Custom Themes
 - Changes users default search engine to Imasse
 - Custom auto-complete url from Imasse's auto-complete api
-- Instant citations by typing !cite
+- Instant citations 
+  - Typing !cite
+  - Right Clicking Anywhere 
+  - Clicking Extension Icon 
 
 ## Latest Version
 
