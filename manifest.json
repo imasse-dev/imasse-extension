@@ -1,48 +1,48 @@
 {
-  "update_url": "https://clients2.google.com/service/update2/crx",
-  "manifest_version": 2,
-  "name": "Imasse - Search the web, educate the world",
-  "version": "1.25",
-  "author": "Imasse.com",
-  "default_locale": "en",
-  "icons": {
-    "16": "files/img/favicon-16x16.png",
-    "32": "files/img/favicon-32x32.png",
-    "128": "files/img/favicon-128x128.png"
-  },
-  "browser_action": {
-    "default_title": "Imasse - Search the web, educate the world",
-    "default_icon": "files/img/favicon-32x32.png",
-    "browser_style": false
-  },
-  "chrome_settings_overrides": {
-    "search_provider": {
-      "encoding": "UTF-8",
-      "is_default": true,
-      "keyword": "Imasse",
-      "name": "Imasse",
-      "search_url": "https://www.imasse.com/search?q={searchTerms}",
-      "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list"
-    }
-  },
-  "chrome_url_overrides": {
-    "newtab": "files/tab.html"
-  },
-  "background": {
-    "scripts": [
-      "files/background.js"
+    "name": "Imasse - Search Extension",
+    "description": "Use the context menu to search a different country's Google",
+    "version": "1.1",
+    "manifest_version": 3,
+    "permissions": [
+            "clipboardWrite",
+            "activeTab",
+            "contextMenus",
+            "storage",
+            "tabs",
+            "topSites"
     ],
-    "persistent": false
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://*.imasse.com/*"
-      ],
-      "css": [
-        "files/content.css"
-      ],
-      "run_at": "document_end"
+    "externally_connectable": {
+        "matches": [
+            "*://localhost/*",
+            "*://cite-api.imasse.workers.dev/*"
+        ]
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "omnibox": {
+        "keyword": "i"
+    },
+"chrome_settings_overrides": {
+    "search_provider": {
+        "encoding": "UTF-8",
+        "is_default": true,
+        "keyword": "Imasse",
+        "name": "Imasse",
+        "search_url": "https://www.imasse.com/search?q={searchTerms}",
+        "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list",
+        "favicon_url": "https://cdn.imasse.com/img/favicon-32x32.png"
     }
-  ]
+},
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "img/favicon-16x16.png",
+        "32": "img/favicon-32x32.png",
+        "128": "img/favicon-128x128.png"
+    }
 }

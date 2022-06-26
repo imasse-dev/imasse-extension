@@ -1,0 +1,123 @@
+<script src="popup.js"></script>
+<div id="copied" class="copiedBefore">Citation Copied</div>
+<div class="logo"></div>
+<div class="search">
+<form method="get" action="https://www.imasse.com/search?" target="_top"><input type="text" name="q" placeholder="Search Imasse" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="2048"></input><button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A6A6A6" class="bi bi-search-heart" viewBox="0 0 16 16">
+    <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+    <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
+  </svg></button></form>
+</div>
+<p>Bibliography Citation</p>
+<div id="bib" class="citation-box"></div>
+<p>In Text Citation</p>
+<div id="text" class="citation-box"></div>
+<p>Credibility</p>
+<div id="cred" class="citation-box"></div>
+<img class="mybib" src="img/mybib.png">
+<div class="cite-button">Load More Results</div>
+  <style>
+    :root {
+    --black: #3C4856;
+    --blue: #4495D4;
+    --gray: #9FACBD;
+    --white: #FFFFFF;
+    --lightGray: #A6A6A6;
+    --bg1: #FFFFFF;
+    --bg2: #F2F4F7;
+    --bg3: #F9FAFD;
+    --border1: #E3E5EA;
+    --shadow1: 0px 1px 35px rgb(30 32 40 / 5%);
+    --shadow2: 0px 1px 35px rgb(30 32 40 / 10%);
+    --font: 'Mulish', sans-serif;
+}
+body {
+   background-color: var(--bg2);
+   margin: 10px;
+   box-sizing: border-box;
+   color: var(--black);
+   width: 300px;
+
+}
+p {
+    font-size: 16px;
+}
+.mybib {
+    float: right;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.cite-button {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1em;
+    margin-top: 75px;
+    border-radius: 36px;
+    text-align: center; 
+    font-size: 16px;
+}
+.cite-button:hover, .citation-box:hover {
+    cursor: pointer;
+}
+
+.copiedBefore {
+    display: none;
+}
+.copiedAfter {
+    display: block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center; 
+    font-size: 16px;
+    
+}
+
+
+.citation-box {
+    background-color: var(--bg1);
+    border-radius: 8px;
+    border: 1px solid var(--border1);
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+form{
+       width: 100%;
+       display: flex;
+       box-shadow: var(--shadow1);
+       border: 1px solid var(--border1);
+       background-color: var(--bg1);
+       border-radius: 8px;
+   }
+   input {
+       width: 90%;
+       height: 3em;
+       margin-left: 18px;
+       background-color: var(--bg1);
+       border: none;
+       outline: none;
+       border-radius: 36px;
+       font-size: 16px;
+   }
+   button {
+       float: right;
+       height: 100%;
+       background-color: var(--bg1);
+       border: none;
+       outline: none;
+       border-radius: 36px;
+       margin: auto 18px auto auto;
+   }
+   button:hover {
+    cursor: pointer;
+   }
+   .logo {
+       background-image: url(img/logo.png);
+       background-size: cover;
+       height: 60px;
+       width: 180px;
+       margin: 25px auto;
+   }
+  </style>
