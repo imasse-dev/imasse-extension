@@ -1,60 +1,63 @@
 {
-"name": "__MSG_ImasseName__",
-    "description": "__MSG_ImasseDesc__",
-    "version": "1.28",
-    "default_locale": "en",
-    "manifest_version": 3,
-    "permissions": [
-        "clipboardWrite",
-        "contextMenus",
-        "tabs",
-        "topSites",
-        "storage"
-    ],
-    "externally_connectable": {
-        "matches": [
-            "*://localhost/*",
-            "*://api.imasse.com/*"
-        ]
-    },
-    "background": {
-        "service_worker": "background.js"
-    },
-    "chrome_settings_overrides": {
-        "search_provider": {
-            "encoding": "UTF-8",
-            "is_default": true,
-            "keyword": "Imasse",
-            "name": "Imasse",
-            "search_url": "https://www.imasse.com/search?q={searchTerms}",
-            "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list",
-            "favicon_url": "https://cdn.imasse.com/img/favicon-32x32.png"
-        }
-    },
-    "chrome_url_overrides": {
-        "newtab": "index.html"
-    },
-    "action": {
-        "default_title": "Cite Current Page",
-        "default_popup": "popup.html"
-    },
-    "icons": {
-        "16": "img/favicon-16x16.png",
-        "32": "img/favicon-32x32.png",
-        "128": "img/favicon-128x128.png"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*.imasse.com/search*"
-            ],
-            "css": [
-                "content.css"
-            ],
-            "js": [
-                "content.js"
-            ],
-            "run_at": "document_end"
-        }
+  "name": "__MSG_ImasseName__",
+  "description": "__MSG_ImasseDesc__",
+  "version": "1.28",
+  "default_locale": "en",
+  "manifest_version": 3,
+  "permissions": [
+    "clipboardWrite",
+    "contextMenus",
+    "tabs",
+    "topSites",
+    "storage"
+  ],
+  "host_permissions" : [
+    "*://*.google-analytics.com/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "*://api.imasse.com/*",
+      "*://*.google-analytics.com/*"
     ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "is_default": true,
+      "keyword": "Imasse",
+      "name": "Imasse",
+      "search_url": "https://www.imasse.com/search?q={searchTerms}",
+      "favicon_url": "https://cdn.imasse.com/img/favicon-32x32.png"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "action": {
+    "default_title": "Cite Current Page",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/favicon-16x16.png",
+    "32": "img/favicon-32x32.png",
+    "128": "img/favicon-128x128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.imasse.com/search*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
 }

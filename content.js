@@ -13,6 +13,7 @@ chrome.storage.sync.get({
   function cidFetch(x){
     const measurement_id = `G-CV44EZ98EN`;
 const api_secret = `tDckBPpmQkSQ8sBy1VUp7w`;
+/*  
 fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}&z=123456`, {
   method: "POST",
   body: JSON.stringify({
@@ -23,5 +24,17 @@ fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_
   }
 ]
 })
+});
+*/
+fetch(`https://jsonplaceholder.typicode.com/posts`, {
+//fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`, {
+  method: "POST",
+  body: JSON.stringify({
+    client_id: 'XXXXXXXXXX.YYYYYYYYYY',
+    events: [{
+      name: 'tutorial_begin',
+      params: {},
+    }]
+  })
 });
 }
