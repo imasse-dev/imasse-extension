@@ -1,32 +1,17 @@
 chrome.runtime.onInstalled.addListener(async (tab) => {
     chrome.contextMenus.create({
-        title: "Create Citation",
-        contexts: ["all"],
-        id: "imasseCitationContextMenu"
+        title: "Search Imasse",
+        contexts: ["selection"],
+        id: "imasseContextMenu"
     });
 });
-
 chrome.contextMenus.onClicked.addListener((item, tab) => {
-    if (item.selectionText !== undefined){
-        let url = new URL(`https://cite.imasse.com/`)
-        url.searchParams.set('cite', item.selectionText)
-        url.searchParams.set('tab', `cite`)
+        let url = new URL(`https://www.imasse.com/search`)
+        url.searchParams.set('q', item.selectionText)
         chrome.tabs.create({ url: url.href, index: tab.index + 1 });
-    }
-    else {
-        let currentTab = tab.url;
-        if((!currentTab.includes("imasse.com"))){
-            let url = new URL(`https://cite.imasse.com/`)
-            url.searchParams.set('cite', currentTab)
-            url.searchParams.set('tab', `cite`)
-            chrome.tabs.create({ url: url.href, index: tab.index + 1 });
-        }
-        else {
-            let url = new URL(`https://cite.imasse.com/`)
-            url.searchParams.set('tab', `cite`)
-            chrome.tabs.create({ url: url.href, index: tab.index + 1 });
-        }
-    }
 });
-
-
+chrome.runtime.onInstalled.addListener(async (tab) => {
+    chrome.tabs.create({
+        url: "https://www.imasse.com/welcome"
+    });
+});
