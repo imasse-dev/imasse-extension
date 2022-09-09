@@ -1,0 +1,55 @@
+:root {
+    --black: #3C4856;
+    --blue: #4495D4;
+    --white: #FFFFFF;
+    --bg1: #FFFFFF;
+    --bg2: #F2F4F7;
+    --border1: #E3E5EA;
+}
+body {
+    background-color: var(--bg2);
+    box-sizing: border-box;
+    color: var(--black);
+    width: 300px;
+    margin: auto;
+}
+p {
+    font-size: 16px;
+    text-align: center;
+}
+.mybib {
+    float: right;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.text-box {
+    background-color: var(--bg1);
+    border-radius: 8px;
+    border: 1px solid var(--border1);
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    overflow:hidden;
+}
+.score-box {
+     background-color: var(--blue);
+     color: var(--white);
+     border-radius: 36px;
+     border: 1px solid var(--border1);
+     font-size: 25px;
+     padding: 10px;
+     margin: 10px 0;
+     font-family: 'Times New Roman', Times, serif;
+     overflow:hidden;
+     width: 30px;
+     margin: auto;
+     text-align: center;
+}
+.logo {
+    background-image: url(img/logo.png);
+    background-size: cover;
+    height: 60px;
+    width: 180px;
+    margin: 25px auto;
+}

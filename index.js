@@ -94,6 +94,7 @@ function openApps() {
 }
 function openSettings() {
     document.querySelector(".settings").style.visibility = "visible";
+    getSchools();
     setIcon.id = "selected";
     setOpened = true;
 }
@@ -110,7 +111,7 @@ function getSchools() {
     dropdown.length = 0;
     let defaultOption = document.createElement('option');
     defaultOption.text = 'Choose School';
-    defaultOption.value = undefined;
+    defaultOption.value = null;
     dropdown.add(defaultOption);
     dropdown.selectedIndex = 0;
     const url = 'https://cdn.imasse.com/api/classroom.json';
@@ -130,6 +131,12 @@ function getSchools() {
                         option.value = data[i].id;
                         dropdown.add(option);
                     }
+                    chrome.storage.sync.get({
+                        cid: null
+                      }, function(items) {
+                        const $select = document.querySelector('#school');
+                        $select.value = items.cid;
+                      });
                 });
             }
         )
@@ -137,16 +144,24 @@ function getSchools() {
             console.error('Fetch Error -', err);
         });
 }
-function saveSchools() {
+function save() {
+    var format = document.getElementById("format").value;
     var school = document.getElementById("school").value;
-    chrome.storage.sync.set({
-        cid: school
-    }, function() {
-        setTimeout(function() {
-            status.textContent = '';
-        }, 750);
-    });
+        chrome.storage.sync.set({
+            mla: format,
+            cid: school
+        }, function() {
+            setTimeout(function() {
+                status.textContent = '';
+            }, 750);
+        });
     close();
 }
-document.getElementById("saveSchools").addEventListener("click", saveSchools);
-document.getElementsByClassName("set-icon").addEventListener("click", getSchools());
+chrome.storage.sync.get({
+    mla: true
+  }, function(items) {
+    const $select = document.querySelector('#format');
+    $select.value = items.mla;
+  });
+
+document.getElementById("save").addEventListener("click", save);

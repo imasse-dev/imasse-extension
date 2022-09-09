@@ -1,26 +1,17 @@
 {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
   "name": "__MSG_ImasseName__",
   "description": "__MSG_ImasseDesc__",
-  "version": "1.28",
+  "version": "1.30",
   "default_locale": "en",
   "manifest_version": 3,
   "permissions": [
-    "clipboardWrite",
     "contextMenus",
     "tabs",
     "topSites",
     "storage"
   ],
-  "host_permissions" : [
-    "*://*.google-analytics.com/*"
-  ],
-  "externally_connectable": {
-    "matches": [
-      "*://localhost/*",
-      "*://api.imasse.com/*",
-      "*://*.google-analytics.com/*"
-    ]
-  },
   "background": {
     "service_worker": "background.js"
   },
@@ -49,10 +40,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.imasse.com/search*"
-      ],
-      "css": [
-        "content.css"
+        "https://search.yahoo.com/yhs/search?hspart=domaindev&hsimp=yhs-domaindev_ddc_imasse&p=*"
       ],
       "js": [
         "content.js"
