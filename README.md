@@ -2,7 +2,8 @@
 
 Imasse is a free search engine and ad free citation generator that makes research easier than ever before. Create instant MLA & APA citations just by clicking the Imasse icon in the top right or find awesome sources to cite by searching the web from your new tab page.
 
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/imasse-dev/imasse-extension.svg?style=flat-square) 
+[![GitHub manifest version](https://img.shields.io/github/manifest-json/v/imasse-dev/imasse-extension.svg?style=flat-square) 
+](https://img.shields.io/chrome-web-store/v/acepffgblgfaajbofgfngmdhkdbbmicb)
 
 Imasse's Browser Extension is distributed under the Mozilla Public License 2.0 [License](LICENSE)
 
