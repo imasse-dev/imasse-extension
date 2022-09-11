@@ -1,19 +1,19 @@
 {
-  "update_url": "https://clients2.google.com/service/update2/crx",
-  "manifest_version": 2,
-  "name": "Imasse - Search the web, educate the world",
-  "version": "1.26",
-  "author": "Imasse.com",
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_ImasseName__",
+  "description": "__MSG_ImasseDesc__",
+  "version": "1.30",
   "default_locale": "en",
-  "icons": {
-    "16": "files/img/favicon-16x16.png",
-    "32": "files/img/favicon-32x32.png",
-    "128": "files/img/favicon-128x128.png"
-  },
-  "browser_action": {
-    "default_title": "Imasse - Search the web, educate the world",
-    "default_icon": "files/img/favicon-32x32.png",
-    "browser_style": false
+  "manifest_version": 3,
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "topSites",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
   "chrome_settings_overrides": {
     "search_provider": {
@@ -22,26 +22,28 @@
       "keyword": "Imasse",
       "name": "Imasse",
       "search_url": "https://www.imasse.com/search?q={searchTerms}",
-      "suggest_url": "https://api.imasse.com/autosuggest?q={searchTerms}&type=list",
       "favicon_url": "https://cdn.imasse.com/img/favicon-32x32.png"
     }
   },
   "chrome_url_overrides": {
-    "newtab": "files/tab.html"
+    "newtab": "index.html"
   },
-  "background": {
-    "scripts": [
-      "files/background.js"
-    ],
-    "persistent": false
+  "action": {
+    "default_title": "Cite Current Page",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/favicon-16x16.png",
+    "32": "img/favicon-32x32.png",
+    "128": "img/favicon-128x128.png"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://*.imasse.com/*"
+        "https://search.yahoo.com/yhs/search?hspart=domaindev&hsimp=yhs-domaindev_ddc_imasse&p=*"
       ],
-      "css": [
-        "files/content.css"
+      "js": [
+        "content.js"
       ],
       "run_at": "document_end"
     }

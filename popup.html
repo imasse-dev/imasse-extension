@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div id="copied" class="copiedBefore">Copied To Clipboard</div>
+    <div class="logo"></div>
+    <div class="search">
+      <form id="searchForm" method="get" action="https://www.imasse.com/search?" target="_top">
+        <input id="formInput" type="text" name="q" placeholder="Search Imasse" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="2048"></input>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A6A6A6" class="bi bi-search-heart" viewBox="0 0 16 16">
+            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+            <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <p id="bibTitle">Works Cited</p>
+    <div id="bibParent" style="padding-left: 36pt; text-indent: -36pt;">
+      <div id="bib" style="font-family: 'Times New Roman'; font-size: 12pt; color: #000000;" class="citation-box">Loading...</div>
+    </div>
+    <p id="textTitle">Text Citation</p>
+    <div id="text" style="font-family: 'Times New Roman'; font-size: 12pt; color: #000000;" class="citation-box">Loading...</div>
+    <p>Credibility</p>
+    <div style="cursor: text; font-family: 'Times New Roman'; font-size: 12pt; color: #000000;" id="cred" class="citation-box">Loading...</div>
+    <img class="mybib" src="img/mybib.png">
+    <div id="loadMore" class="cite-button">Load More Results</div>
+  </body>
+  <script src="popup.js"></script>
+</html>

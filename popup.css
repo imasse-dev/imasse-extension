@@ -1,0 +1,104 @@
+:root {
+     --black: #3C4856;
+     --blue: #4495D4;
+     --gray: #9FACBD;
+     --white: #FFFFFF;
+     --lightGray: #A6A6A6;
+     --bg1: #FFFFFF;
+     --bg2: #F2F4F7;
+     --bg3: #F9FAFD;
+     --border1: #E3E5EA;
+     --shadow1: 0px 1px 35px rgb(30 32 40 / 5%);
+     --shadow2: 0px 1px 35px rgb(30 32 40 / 10%);
+     --font: 'Mulish', sans-serif;
+}
+ body {
+     background-color: var(--bg2);
+     margin: 10px;
+     box-sizing: border-box;
+     color: var(--black);
+     width: 300px;
+}
+ p {
+     font-size: 16px;
+}
+ .mybib {
+     float: right;
+     height: 35px;
+     margin-bottom: 15px;
+}
+ .cite-button {
+     background-color: var(--blue);
+     color: var(--white);
+     padding: 1em;
+     margin-top: 75px;
+     border-radius: 36px;
+     text-align: center;
+     font-size: 16px;
+}
+ .cite-button:hover, .citation-box:hover {
+     cursor: pointer;
+}
+ .copiedBefore {
+     display: none;
+}
+ .copiedAfter {
+     display: block;
+     background-color: var(--blue);
+     color: var(--white);
+     padding: 1em;
+     border-radius: 8px;
+     text-align: center;
+     font-size: 16px;
+}
+ .citation-box {
+     background-color: var(--bg1);
+     border-radius: 8px;
+     border: 1px solid var(--border1);
+     font-size: 16px;
+     padding: 10px;
+     margin: 10px 0;
+     font-family: 'Times New Roman', Times, serif;
+     overflow:hidden;
+}
+ form{
+     width: 100%;
+     display: flex;
+     box-shadow: var(--shadow1);
+     border: 1px solid var(--border1);
+     background-color: var(--bg1);
+     border-radius: 8px;
+}
+ input {
+     width: 90%;
+     height: 3em;
+     margin-left: 18px;
+     background-color: var(--bg1);
+     border: none;
+     outline: none;
+     border-radius: 36px;
+     font-size: 16px;
+}
+ button {
+     float: right;
+     height: 100%;
+     background-color: var(--bg1);
+     border: none;
+     outline: none;
+     border-radius: 36px;
+     margin: auto 18px auto auto;
+}
+ button:hover {
+     cursor: pointer;
+}
+ .logo {
+     background-image: url(img/logo.png);
+     background-size: cover;
+     height: 60px;
+     width: 180px;
+     margin: 25px auto;
+}
+ #bibParent {
+     padding-left: 0 !important;
+     text-indent: 0 !important;
+}

@@ -1,21 +1,28 @@
 # Imasse Browser Extension
 
+Imasse is a free search engine and ad free citation generator that makes research easier than ever before. Create instant MLA & APA citations just by clicking the Imasse icon in the top right or find awesome sources to cite by searching the web from your new tab page.
+
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/imasse-dev/imasse-extension.svg?style=flat-square) 
 
 Imasse's Browser Extension is distributed under the Mozilla Public License 2.0 [License](LICENSE)
 
 ## Features
-
-This extension gives users quick and easy access to the Imasse search engine found at www.imasse.com
-
 - Launches Imasse on new tab load
+  - Top Sites
+  - Apps Menu
+  - Settings
+    - Citation format
+    - School selection
 - Changes users default search engine to Imasse
-- Custom auto-complete url from Imasse's auto-complete api
-- Instant citations by typing !cite
+- Instant MLA & APA citations 
+  - By clicking extension icon 
+- View credibility for any website
+  - By right clicking on any link 
+    -  For example in search results 
 
 ## Latest Version
 
-The lastest version can be downloaded from the Chrome Web Store located [here](https://chrome.google.com/webstore/detail/imasse-search-the-web-edu/acepffgblgfaajbofgfngmdhkdbbmicb)
+The lastest version can be downloaded from the Chrome Web Store located [here](https://www.imasse.com/download)
 
 ## Development
 
@@ -30,6 +37,15 @@ Steps to begin contributing to Imasse's Browser Extension
 - Open folder in your favorite code editor and begin testing
 
 Once done be sure to upload your code to your GitHub repository you forked and submit a pull request to the main-dev branch
+
+## API endpoints
+Citation api: https://api.imasse.com/citations/search?q={encoded url}
+
+Credibility api: https://api.imasse.com/credibility/search?q={encoded url}
+
+Available schools list: https://cdn.imasse.com/api/classroom.json
+
+Tile ads: https://cdn.imasse.com/api/tiles.json
 
 ## Reporting a broken site
 
