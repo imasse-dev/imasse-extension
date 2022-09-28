@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.getSelection().removeAllRanges();
         window.scrollTo(0, 0);
         document.getElementById("copied").className = "copiedAfter";
+        document.getElementById("level").className = "copiedBefore";
     });
     const textCopy = document.querySelector('#text');
     textCopy.addEventListener('click', async () => {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.getSelection().removeAllRanges();
         window.scrollTo(0, 0);
         document.getElementById("copied").className = "copiedAfter";
+        document.getElementById("level").className = "copiedBefore";
     });
 });
 function search() {
@@ -46,6 +48,17 @@ function more() {
         });
     });
 }
+function test() {
+    chrome.tabs.query({
+        active: true,
+        currentWindow: true
+    }, function(tabs) {
+        chrome.tabs.create({
+            active: true,
+            url: "https://cdn.imasse.com/mla/test"
+        });
+    });
+}
 async function getCitation(v) {
     try {
     if(v.startsWith("https://") || v.startsWith("http://")){
@@ -57,9 +70,10 @@ async function getCitation(v) {
     let result = JSON.parse(json);
 
     chrome.storage.sync.get({
+        mlaScore: 0,
         mla: 'default'
       }, function(items) {
-        console.log(items.mla);
+        setScore(items.mlaScore)
         if(items.mla == 'true' || items.mla == 'default'){
            mla();
         }
@@ -67,7 +81,20 @@ async function getCitation(v) {
             apa();
         }
       });
-
+    function setScore(x){
+            if(x < 3){
+                document.getElementById("level").innerHTML = "MLA Beginner";
+                document.getElementById("level").className = "copiedAfter";
+              }
+              else if(x > 4){
+                document.getElementById("level").innerHTML = "MLA Expert";
+                document.getElementById("level").className = "copiedAfter";
+              }
+              else{
+                document.getElementById("level").innerHTML = "MLA Intermediate";
+                document.getElementById("level").className = "copiedAfter";
+              }
+    }
     function mla(){
         const months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
         function author(x) {
@@ -305,3 +332,5 @@ const form = document.getElementById('searchForm');
 form.addEventListener('submit', search);
 const moreLoad = document.getElementById('loadMore');
 moreLoad.addEventListener('click', more);
+const testLoad = document.getElementById('level');
+testLoad.addEventListener('click', test);

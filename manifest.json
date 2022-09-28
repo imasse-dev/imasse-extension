@@ -3,7 +3,7 @@
 
   "name": "__MSG_ImasseName__",
   "description": "__MSG_ImasseDesc__",
-  "version": "1.30",
+  "version": "1.31",
   "default_locale": "en",
   "manifest_version": 3,
   "permissions": [
@@ -44,6 +44,15 @@
       ],
       "js": [
         "content.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://cdn.imasse.com/mla/*"
+      ],
+      "js": [
+        "test.js"
       ],
       "run_at": "document_end"
     }
