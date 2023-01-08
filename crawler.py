@@ -30,8 +30,6 @@ def check(x, y):
     def null(x):
       if x == "":
         x = None
-
-    #if remove(str(null(x)).lower()) == remove(str(null(y)).lower()):
     if x == y:
       return "1"
     else:
@@ -54,15 +52,21 @@ def check(x, y):
   except:
     result += "2"
   try:
-    result += match(x["issued"]["year"], y["issued"]["date-parts"][0][0])
+    result += match(str(x["issued"]["year"]), y["issued"]["date-parts"][0][0])
   except:
     result += "2"
   try:
-    result += match(x["issued"]["month"], y["issued"]["date-parts"][0][1])
+    if (y["issued"]["date-parts"][0][1])[0] == "0":
+      result += match(str(x["issued"]["month"]), (y["issued"]["date-parts"][0][1])[1:])
+    else:
+      result += match(str(x["issued"]["month"]), y["issued"]["date-parts"][0][1])
   except:
     result += "2"
   try:
-    result += match(x["issued"]["day"], y["issued"]["date-parts"][0][2])
+    if (y["issued"]["date-parts"][0][2])[0] == "0":
+      result += match(x["issued"]["day"], y["issued"]["date-parts"][0][2])
+    else:
+      result += match(str(x["issued"]["day"]), y["issued"]["date-parts"][0][2])
   except:
     result = result + "2"
   print(result)
@@ -73,17 +77,13 @@ def check(x, y):
   global finalz
   finalz += z
   print(x)
-  # send(x)
-
 
 def save(y):
   file = open("save.txt", "a")
   file.write(y + "\n")
   file.close()
-  # print('case-3')
-
-# NUM_TIMES is number of wikipedia articles to scrape (on average 1 article equals 10 citations)
-for z in range(NUM_TIMES):
+  
+for z in range(50):
   try:
     wi = "https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extlinks&format=json"
     w = requests.get(url=wi)
@@ -98,11 +98,9 @@ for z in range(NUM_TIMES):
             finaly += 1
           except:
             print("Invalid Website")
-            # print(link);
           time.sleep(1)
   except:
     print("Invalid Wiki")
-
 completeStr = str(finalx) + "-" + str(finalz) + "-" + str(finaly * 7)
 save(completeStr)
 print("complete")
