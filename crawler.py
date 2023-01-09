@@ -40,7 +40,7 @@ def check(x, y):
   except:
     result += "2"
   try:
-    result += match(x["author"][0]["literal"], y["author"][0]["family"])
+    result += match(x["author"][0]["family"], y["author"][0]["family"])
   except:
     result += "2"
   try:
