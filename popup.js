@@ -262,7 +262,7 @@ async function getCitation(v) {
     }
     function accessed() {
         const date = new Date();
-        const d = date.getDate();
+        const d = date.getDay();
         const m = date.getMonth();
         const y = date.getFullYear();
         return ('Retrieved ' + monthsFull[m] + ' ' + d + ', ' + y + ', from ');
