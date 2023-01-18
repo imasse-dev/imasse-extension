@@ -10,7 +10,6 @@
      --border1: #E3E5EA;
      --shadow1: 0px 1px 35px rgb(30 32 40 / 5%);
      --shadow2: 0px 1px 35px rgb(30 32 40 / 10%);
-     --font: 'Mulish', sans-serif;
 }
  body {
      background-color: var(--bg2);
@@ -46,18 +45,15 @@
      display: block;
      margin: auto;
 }
- #tiles_div {
-     visibility: hidden;
-}
  .middle {
      width: 100%;
      padding-top: 10rem;
 }
  .middle .logo {
-     background-image: url(img/logo.png);
+     background-image: url(img/logo.svg);
      background-size: cover;
-     height: 100px;
-     width: 300px;
+     height: 95.49375px;
+     width: 264.735417px;
      margin: auto;
 }
  .middle .search {
@@ -197,19 +193,17 @@
      visibility: hidden;
 }
  @media screen and (max-width: 650px) {
-     .middle .tiles {
-         display: none;
-    }
-     .middle {
-         width: 100%;
-         padding-top: 12rem;
-    }
      .footer {
          overflow-x: scroll;
          white-space: nowrap;
     }
 }
- @media screen and (max-height: 650px) {
+@media screen and (max-width: 600px) {
+    .middle .tiles {
+        display: none;
+   }
+}
+ @media screen and (max-height: 600px) {
      .middle .tiles {
          display: none;
     }

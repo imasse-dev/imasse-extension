@@ -3,7 +3,7 @@
 
   "name": "__MSG_ImasseName__",
   "description": "__MSG_ImasseDesc__",
-  "version": "1.32",
+  "version": "1.33",
   "default_locale": "en",
   "manifest_version": 3,
   "permissions": [

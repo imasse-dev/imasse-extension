@@ -1,37 +1,13 @@
 function buildPopupDom(mostVisitedURLs) {
     var tiles_container = document.getElementById('tiles_div');
-    let length = 8;
-    if (mostVisitedURLs.length < 10) {
-        length = mostVistedURLs.length;
-    }
+    let length = mostVisitedURLs.length;
     for (var i = 0; i < length; i++) {
-        if (i < 3) {
+
             if (i == 0) {
                 var tiles = tiles_container.appendChild(document.createElement('div'));
                 tiles.classList.add('tiles');
-                for (var k = 0; k < 2; k++) {
-                    var a = tiles.appendChild(document.createElement('a'));
-                    var tile = a.appendChild(document.createElement('div'));
-                    tile.classList.add('tile');
-                    var img = tile.appendChild(document.createElement('img'));
-                    var p = tile.appendChild(document.createElement('p'));
-                    a.id = 'adA' + (k + 1);
-                    img.id = 'adImg' + (k + 1);
-                    p.id = 'adP' + (k + 1);
-                }
-                getTiles();
-
             }
-            var a = tiles.appendChild(document.createElement('a'));
-            var tile = a.appendChild(document.createElement('div'));
-            tile.classList.add('tile');
-            var img = tile.appendChild(document.createElement('img'));
-            var p = tile.appendChild(document.createElement('p'));
-            a.href = mostVisitedURLs[i].url;
-            img.src = "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + mostVisitedURLs[i].url + "&size=24";
-            p.innerHTML = mostVisitedURLs[i].title;
-        } else {
-            if (i == 3) {
+            if (i == 5) {
                 var tiles = tiles_container.appendChild(document.createElement('div'));
                 tiles.classList.add('tiles');
             }
@@ -44,7 +20,6 @@ function buildPopupDom(mostVisitedURLs) {
             img.src = "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + mostVisitedURLs[i].url + "&size=24";
             p.innerHTML = mostVisitedURLs[i].title;
         }
-    }
 }
 chrome.topSites.get(buildPopupDom);
 async function getTiles() {
