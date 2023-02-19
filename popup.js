@@ -1,3 +1,10 @@
+chrome.storage.sync.get({
+    disTheme: null
+  }, function(items) {
+    if(items.disTheme == "false"){
+        document.body.classList.add('dark-mode')
+    }
+  });
 document.addEventListener('DOMContentLoaded', () => {
     chrome.tabs.query({
         active: true,

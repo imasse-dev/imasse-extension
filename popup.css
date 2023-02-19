@@ -1,22 +1,25 @@
 :root {
-     --black: #3C4856;
-     --blue: #4495D4;
-     --gray: #9FACBD;
-     --white: #FFFFFF;
-     --lightGray: #A6A6A6;
+     --logo: url(img/logo.svg);
+     --text: #3C4856;
+     --button: #4495D4;
      --bg1: #FFFFFF;
      --bg2: #F2F4F7;
-     --bg3: #F9FAFD;
-     --border1: #E3E5EA;
+     --border: #E3E5EA;
      --shadow1: 0px 1px 35px rgb(30 32 40 / 5%);
      --shadow2: 0px 1px 35px rgb(30 32 40 / 10%);
-     --font: 'Mulish', sans-serif;
+}
+.dark-mode {
+    --logo: url(img/logo-dark.svg);
+    --text: #FFFFFF;
+    --button: #FFFFFF;
+    --bg1: #0D0D0D;
+    --bg2: #171717;
 }
  body {
      background-color: var(--bg2);
      margin: 10px;
      box-sizing: border-box;
-     color: var(--black);
+     color: var(--text);
      width: 300px;
 }
  p {
@@ -28,8 +31,8 @@
      margin-bottom: 15px;
 }
  .cite-button {
-     background-color: var(--blue);
-     color: var(--white);
+     background-color: var(--button);
+     color: var(--bg1);
      padding: 1em;
      margin-top: 75px;
      border-radius: 36px;
@@ -44,12 +47,15 @@
 }
  .copiedAfter {
      display: block;
-     background-color: var(--blue);
-     color: var(--white);
+     background-color: var(--button);
+     color: var(--bg1);
      padding: 1em;
      border-radius: 8px;
      text-align: center;
      font-size: 16px;
+}
+.citation-box {
+     color: var(--text) !important
 }
  .citation-box {
      background-color: var(--bg1);
@@ -65,7 +71,7 @@
      width: 100%;
      display: flex;
      box-shadow: var(--shadow1);
-     border: 1px solid var(--border1);
+     border: 1px solid var(--border);
      background-color: var(--bg1);
      border-radius: 8px;
 }
@@ -92,7 +98,7 @@
      cursor: pointer;
 }
  .logo {
-     background-image: url(img/logo.svg);
+     background-image: var(--logo);
      background-size: cover;
      height: 65.4814286px;
      width: 181.542857;
